@@ -76,9 +76,12 @@ char *welcome(char* hello, char* name) {
  * returns: nothing. result contains the reversed string.
  */
 void reverse(char* txt, char* result) {
-	for(int i=(strlen(txt) - 1);i>0;i--){
-		/**strcat(result, txt[i]);**/
+	int len = strlen(txt);
+	for(int i=len-1;i>=0;i--){
+		/**strcat(result, &txt[i]);**/
+		result[len-1-i]= txt[i];
 	}
+	result[len] = '\0';
 }
 
 
@@ -93,11 +96,13 @@ void reverse(char* txt, char* result) {
  */
 int vowels(char* txt) {
 	int vowel = 0;
-	printf("%s\n", txt[0]);
-	for(int i=(strlen(txt) - 1);i>0;i--){
-		/**if (txt[i] == "a" || txt[i] == "e" || txt[i] == "i" || txt[i] == "o" || txt[i] == "u"){
+	/**printf("%s\n", txt[0]);**/
+	for(int i=(strlen(txt) - 1);i>=0;i--){
+		/**printf("%s\n", txt[0]);
+		printf("%i\n", strcmp(&txt[i], "a"));**/
+		if (txt[i] == 'a' || txt[i] == 'e' || txt[i] == 'i' || txt[i] == 'o' || txt[i] == 'u' || txt[i] == 'A' || txt[i] == 'E' || txt[i] == 'I' || txt[i] == 'O' || txt[i] == 'U'){
 			vowel++;
-		}**/
+		}
 	}
 
 	return vowel;
@@ -119,10 +124,20 @@ int vowels(char* txt) {
  * returns: integer quarter [1..4]
  */
 int quartile(char* name) {
-
-	/* REPLACE WITH YOUR CODE */
+	int quart = 0;
+	quart = name[0];
+	quart = quart - 64;
+	if (quart <= 6){
+		quart = 1;
+	}else if(quart <= 12){
+		quart = 2;
+	}else if(quart <= 18){
+		quart = 3;
+	}else{
+		quart = 4;
+	}
 	
-	return -1; // <==fix!
+	return quart; // <==fix!
 }
 
 
