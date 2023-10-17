@@ -9,10 +9,9 @@
  *       0 otherwise
  */
 
+
 CHIP And {
     IN a, b;
     OUT out;
 
-    PARTS:
-    // Put your code here:
 }
