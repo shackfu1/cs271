@@ -14,4 +14,36 @@ CHIP And16 {
 
     PARTS:
     // Put your code here:
+    Nand(a=a[0],b=b[0],out=result0);
+    Not(in=result0,out=out[0]);
+    Nand(a=a[1],b=b[1],out=result1);
+    Not(in=result1,out=out[1]);
+    Nand(a=a[2],b=b[2],out=result2);
+    Not(in=result2,out=out[2]);
+    Nand(a=a[3],b=b[3],out=result3);
+    Not(in=result3,out=out[3]);
+    Nand(a=a[4],b=b[4],out=result4);
+    Not(in=result4,out=out[4]);
+    Nand(a=a[5],b=b[5],out=result5);
+    Not(in=result5,out=out[5]);
+    Nand(a=a[6],b=b[6],out=result6);
+    Not(in=result6,out=out[6]);
+    Nand(a=a[7],b=b[7],out=result7);
+    Not(in=result7,out=out[7]);
+    Nand(a=a[8],b=b[8],out=result8);
+    Not(in=result8,out=out[8]);
+    Nand(a=a[9],b=b[9],out=result9);
+    Not(in=result9,out=out[9]);
+    Nand(a=a[10],b=b[10],out=result10);
+    Not(in=result10,out=out[10]);
+    Nand(a=a[11],b=b[11],out=result11);
+    Not(in=result11,out=out[11]);
+    Nand(a=a[12],b=b[12],out=result12);
+    Not(in=result12,out=out[12]);
+    Nand(a=a[13],b=b[13],out=result13);
+    Not(in=result13,out=out[13]);
+    Nand(a=a[14],b=b[14],out=result14);
+    Not(in=result14,out=out[14]);
+    Nand(a=a[15],b=b[15],out=result15);
+    Not(in=result15,out=out[15]);
 }
