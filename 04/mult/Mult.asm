@@ -9,4 +9,32 @@
 // This program only needs to handle arguments that satisfy
 // R0 >= 0, R1 >= 0, and R0*R1 < 32768.
 
-// Put your code here.
+D=0
+@2
+M=0
+@1
+D=M
+@11
+M=D // store RAM[1] in RAM[11]
+@0
+D=M
+@10
+M=0
+M=M-D
+@10
+D=M
+@0
+D=D+M
+@10
+M=D
+@11
+M=M-1
+D=M
+@12
+D;JGE
+@10
+D=M
+@2
+M=D
+@26
+0;JMP
